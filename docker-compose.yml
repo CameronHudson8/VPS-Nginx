@@ -1,0 +1,8 @@
+version: "3"
+services:
+  webserver:
+    build: .
+    tty: true
+    ports:
+      - "80:80"
+      - "443:443"
