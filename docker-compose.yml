@@ -1,0 +1,14 @@
+version: "3.7"
+services:
+  webserver:
+    build: .
+    tty: true
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - /etc/ssl:/etc/ssl:ro
+
+networks:
+  default:
+    name: reverse_proxy
