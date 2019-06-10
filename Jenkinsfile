@@ -22,7 +22,7 @@ pipeline {
             steps {
                 wrap(withColor) {
                     sh 'echo "Deploying..."'
-                    sh 'docker-compose up -d'
+                    sh 'docker-compose up -d --remove-orphans'
                 }
             }
         }
